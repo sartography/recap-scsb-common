@@ -1,4 +1,4 @@
-package org.recap.model.jaxb;
+package org.recap.common.model.jaxb;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

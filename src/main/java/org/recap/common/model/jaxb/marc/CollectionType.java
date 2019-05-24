@@ -1,7 +1,7 @@
 package org.recap.common.model.jaxb.marc;
 
 import org.apache.log4j.Logger;
-import org.recap.model.jaxb.JAXBContextHandler;
+import org.recap.common.model.jaxb.JAXBContextHandler;
 
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
