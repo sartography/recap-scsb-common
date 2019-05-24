@@ -1,0 +1,66 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'java'
+    id 'maven'
+    id 'jacoco'
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'org.sonarqube' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
+    id "io.freefair.lombok" version "3.6.4"
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+    maven { url "http://repo1.maven.org/maven2/" }
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+
+//added to accept systemproperties while executing gradlew test cmd
+test {
+    systemProperties = System.properties
+    systemProperties['user.dir'] = workingDir
+    useJUnitPlatform()
+}
+
+jar {
+    archiveBaseName = 'scsb-common'
+    archiveVersion = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    compile group: 'javax.jms', name: 'javax.jms-api', version: '2.0.1'
+    compile group: 'org.apache.activemq', name: 'activemq-camel', version: '5.15.9'
+    compile group: 'org.apache.camel', name: 'camel-spring', version: '2.24.0'
+    compile group: 'org.apache.camel', name: 'camel-spring-boot-starter', version: '2.24.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    compile group: 'org.codehaus.jettison', name: 'jettison', version: '1.4.0'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.4.RELEASE'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task scsbCommonJavadocs(type: Javadoc) {
+    source = sourceSets.main.java
+    classpath = configurations.compile
+    options.addStringOption('Xdoclint:none', '-quiet')
+    String home = System.getProperty('user.home');
+    destinationDir =  new File(home+'/scsb-common-javadocs/scsb-common');
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: ".")
+        }
+    }
+}
