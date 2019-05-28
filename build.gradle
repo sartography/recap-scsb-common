@@ -31,7 +31,7 @@ test {
 }
 
 jar {
-    archiveBaseName = 'scsb-common'
+    archiveBaseName = 'common'
     archiveVersion = '1.0'
 }
 
@@ -71,3 +71,30 @@ uploadArchives {
 
 group = 'org.recap'
 version = '1.0'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            versionMapping {
+                usage('java-runtime'){
+                    fromResolutionResult()
+                }
+            }
+        }
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }
+}
