@@ -71,3 +71,15 @@ uploadArchives {
 
 group = 'org.recap'
 version = '1.0'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.recap'
+            artifactId = 'common'
+            version = '1.0'
+
+            from components.java
+        }
+    }
+}
