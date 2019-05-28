@@ -23,11 +23,9 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
-//added to accept systemproperties while executing gradlew test cmd
 test {
     systemProperties = System.properties
     systemProperties['user.dir'] = workingDir
-//    useJUnitPlatform()
 }
 
 jar {
@@ -61,27 +59,5 @@ task scsbCommonJavadocs(type: Javadoc) {
     destinationDir =  new File(home+'/scsb-common-javadocs/scsb-common');
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: ".")
-        }
-    }
-}
-
 group = 'com.github.sartography'
 version = '1.0'
-
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            licenses {
-                license {
-                    name 'The Apache Software License, Version 2.0'
-                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    distribution 'repo'
-                }
-            }
-        }
-    }
-}
