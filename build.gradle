@@ -1,5 +1,3 @@
-import org.gradle.api.JavaVersion
-
 plugins {
     id 'eclipse'
     id 'idea'
@@ -70,3 +68,6 @@ uploadArchives {
         }
     }
 }
+
+group = 'org.recap'
+version = '1.0'
