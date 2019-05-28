@@ -11,7 +11,4 @@
 *.rar
 hs_err_pid*
 .gradle
-build/*
-!build/libs
-build/libs/*
-!build/libs/*.jar
+build

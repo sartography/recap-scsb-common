@@ -69,21 +69,8 @@ uploadArchives {
     }
 }
 
-group = 'org.recap'
+group = 'com.github.sartography'
 version = '1.0'
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from components.java
-            versionMapping {
-                usage('java-runtime'){
-                    fromResolutionResult()
-                }
-            }
-        }
-    }
-}
 
 install {
     repositories.mavenInstaller {
