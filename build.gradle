@@ -25,7 +25,7 @@ targetCompatibility = '1.8'
 test {
     systemProperties = System.properties
     systemProperties['user.dir'] = workingDir
-    useJUnitPlatform()
+//    useJUnitPlatform()
 }
 
 jar {
@@ -34,7 +34,7 @@ jar {
 }
 
 dependencies {
-    compile group: 'log4j', name: 'log4j', version: '1.2.16'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
     compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
@@ -47,8 +47,8 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.4.RELEASE'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
 }
 
 task scsbCommonJavadocs(type: Javadoc) {

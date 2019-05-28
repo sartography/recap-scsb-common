@@ -1,6 +1,6 @@
 package org.recap.common.model.jaxb.marc;
 
-import org.apache.log4j.Logger;
+import lombok.extern.log4j.Log4j;
 import org.recap.common.model.jaxb.JAXBContextHandler;
 
 import javax.xml.bind.Marshaller;
@@ -33,6 +33,7 @@ import java.util.List;
  * &lt;/complexType>
  * </pre>
  */
+@Log4j
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "collection", propOrder = {
         "record"
@@ -40,8 +41,6 @@ import java.util.List;
 
 @XmlRootElement(name = "collection")
 public class CollectionType implements Serializable {
-
-    private static final Logger LOG = Logger.getLogger(CollectionType.class);
 
     /**
      * The Record.
@@ -129,7 +128,7 @@ public class CollectionType implements Serializable {
             }
             result = stringWriter.toString();
         } catch (Exception e) {
-            LOG.error("Exception :", e);
+            log.error("Exception :", e);
         }
         return result;
     }
@@ -147,7 +146,7 @@ public class CollectionType implements Serializable {
 
             collectionType = (CollectionType) unmarshaller.unmarshal(new StringReader(collectionTypeXml));
         } catch (Exception e) {
-            LOG.error("Exception :", e);
+            log.error("Exception :", e);
         }
         return collectionType;
     }

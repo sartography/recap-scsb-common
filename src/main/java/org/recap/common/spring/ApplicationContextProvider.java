@@ -15,7 +15,7 @@ public class ApplicationContextProvider implements ApplicationContextAware {
 
     private static ApplicationContextProvider applicationContextProvider;
 
-    private ApplicationContextProvider(){
+    private ApplicationContextProvider() {
     }
 
     /**
@@ -23,8 +23,8 @@ public class ApplicationContextProvider implements ApplicationContextAware {
      *
      * @return the application context provider
      */
-    public static ApplicationContextProvider getInstance(){
-        if(null == applicationContextProvider){
+    public static ApplicationContextProvider getInstance() {
+        if (null == applicationContextProvider) {
             applicationContextProvider = new ApplicationContextProvider();
         }
         return applicationContextProvider;

@@ -275,13 +275,6 @@ public final class ReCAPConstants {
     public static final String GFA_STATUS_VER_ON_PW_DIRECT_WORK_ORDER = "VER ON PWD WO:";
     public static final String GFA_STATUS_VER_ON_RET_WORK_ORDER = "VER ON RET WO:";
     public static final String GFA_STATUS_VER_ON_WORK_ORDER = "VER ON WO:";
-
-    protected static final List<String> GFA_STATUS_AVAILABLE_LIST = Arrays.asList(GFA_STATUS_INCOMING_ON_WORK_ORDER, GFA_STATUS_REACC_ON_WORK_ORDER, GFA_STATUS_VER_ON_REFILE_WORK_ORDER, GFA_STATUS_IN);
-    protected static final List<String> GFA_STATUS_NOT_AVAILABLE_LIST = Arrays.asList(GFA_STATUS_SCH_ON_REFILE_WORK_ORDER, GFA_STATUS_NOT_ON_FILE, GFA_STATUS_OUT_ON_RETRIVAL_WORK_ORDER, GFA_STATUS_PW_INDIRECT_WORK_ORDER, GFA_STATUS_PW_DIRECT_WORK_ORDER,
-            GFA_STATUS_SCH_ON_RET_WORK_ORDER, GFA_STATUS_VER_ON_PW_INDIRECT_WORK_ORDER, GFA_STATUS_VER_ON_PW_DIRECT_WORK_ORDER, GFA_STATUS_VER_ON_RET_WORK_ORDER, GFA_STATUS_VER_ON_WORK_ORDER, GFA_STATUS_REFILE_ON_WORK_ORDER, GFA_STATUS_OUT_ON_EDD_WORK_ORDER, GFA_STATUS_VER_ON_EDD_WORK_ORDER, GFA_STATUS_SCH_ON_EDD_WORK_ORDER);
-
-    protected static final List<String> REQUEST_TYPE_LIST = Arrays.asList(ReCAPConstants.RETRIEVAL, ReCAPConstants.REQUEST_TYPE_EDD, ReCAPConstants.BORROW_DIRECT, ReCAPConstants.REQUEST_TYPE_RECALL);
-
     public static final String SUCCESSFULLY_PROCESSED_REQUEST_ITEM = "Successfully Processed Request Item";
     public static final String REQUEST_ITEM_BARCODE_NOT_FOUND = "ITEM BARCODE NOT FOUND.";
     public static final String REQUEST_CANCELLATION_SUCCCESS = "Request cancellation succcessfully processed";
@@ -290,20 +283,16 @@ public final class ReCAPConstants {
     public static final String REQUEST_CANCELLATION_NOT_ON_HOLD_IN_ILS = "This Request cannot be canceled, this item is not on hold in ILS";
     public static final String REQUEST_CANCELLATION_NOT_ACTIVE = "RequestId is not active status to be canceled";
     public static final String REQUEST_CANCELLATION_DOES_NOT_EXIST = "RequestId does not exist";
-
     public static final String GFA_RETRIVAL_ORDER_SUCCESSFUL = "Retrieval order successfully created in LAS.";
     public static final String GFA_RETRIVAL_ITEM_NOT_AVAILABLE = "LAS Exception : Item not available in LAS";
     public static final String GFA_ITEM_STATUS_CHECK_FAILED = "LAS Exception : Item status check failed to return valid response.";
     public static final String SCSB_REQUEST_EXCEPTION = "SCSB Exception : Error occurred at SCSB - ";
     public static final String REQUEST_CANCELLED_NO_REFILED = "canceled";
     public static final String REQUEST_CANCELLED_SUBJECT = "Cancel Request - ";
-
     public static final String REQUEST_RECALL_TO_BORRWER = "recalled";
     public static final String REQUEST_RECALL_SUBJECT = "Recall - ";
-
     public static final String REQUEST_REFILE_BODY = "The following item has been requested and was found to be under Refile in LAS.";
     public static final String REQUEST_REFILE_SUBJECT = "Request for Item on Refile WO - ";
-
     //Deaccession
     public static final String REQUESTED_ITEM_DEACCESSIONED = "The requested item has already been deaccessioned.";
     public static final String ITEM_BARCDE_DOESNOT_EXIST = "Item barcode doesn't exist in SCSB database.";
@@ -322,10 +311,7 @@ public final class ReCAPConstants {
     public static final String REQUEST_ITEM_CANCELED_FOR_DEACCESSION = "The request for this item has been canceled because the item has been deaccessioned.";
     public static final String REASON_CANCEL_REQUEST_FAILED = "Canceling hold for the requested item failed for the reason";
     public static final String DISCOVERY = "Discovery";
-
     public static final String DATE_FORMAT_FOR_FILE_NAME = "yyyyMMdd_HHmmss";
-
-
     //Logger
     public static final String LOG_ERROR = "error-->";
     public static final String GFA_ITEM_STATUS_MISMATCH = "There is a mismatch in item status between SCSB and LAS. Please contact ReCAP staff (<a href=\"mailto:{0}\">{1}</a>) for further assistance.";
@@ -342,7 +328,6 @@ public final class ReCAPConstants {
     public static final String RECALL_FAILED_NO_MESSAGE_RETURNED = "Recall failed, no message returned";
     public static final String RECALL_CANNOT_BE_PROCESSED_THE_ITEM_IS_NOT_CHECKED_OUT_IN_ILS = "Recall Cannot be processed, the item is not checked out in ILS";
     public static final String FINISH_PROCESSING = "Finish Processing";
-
     public static final String EMAIL_BODY_FOR = "emailBodyFor";
     public static final String SUBMIT_COLLECTION_SUCCESS_LIST = "submitCollectionSuccessList";
     public static final String SUBMIT_COLLECTION_FAILURE_LIST = "submitCollectionFailureList";
@@ -367,15 +352,11 @@ public final class ReCAPConstants {
     public static final String SUBMIT_COLLECTION_SFTP_OPTIONS = "&sendEmptyMessageWhenIdle=true&move=.done&sortBy=file:modified&localWorkDirectory=";
     public static final String SUBMIT_COLLECTION_COMPLETE_RECORD_UPDATE = "Complete item record info updated through submit collection";
     public static final String SUBMIT_COLLECTION_DUMMY_RECORD_UPDATE = "Dummy item record removed and actual record added through submit collection";
-
     public static final String PURGE_EDD_REQUEST = "noOfUpdatedRecordsForEddRequest";
     public static final String PURGE_PHYSICAL_REQUEST = "noOfUpdatedRecordsForPhysicalRequest";
-
     public static final String DEACCESSION_ROLLBACK = "Deaccession Rollback";
     public static final String DEACCESSION_ROLLBACK_NOTES = " Hence, the transaction of deaccessioning item is rolled back.";
-
     public static final String COUNT_OF_PURGED_EXCEPTION_REQUESTS = "countOfPurgedExceptionRequests";
-
     public static final String REQUEST_DATA_LOAD_CREATED_BY = "LAS";
     public static final String REQUEST_DATA_LOAD_REQUEST_TYPE = "PHY";
     public static final String REQUEST_DATA_LOAD_PATRON_ID = "0000000";
@@ -386,14 +367,12 @@ public final class ReCAPConstants {
     public static final String RECORD_INCOMPLETE = "Record continue to be incomplete because ";
     public static final String DELETED_RECORDS_SUCCESS_MSG = "Deleted records completed successfully";
     public static final String DELETED_RECORDS_FAILURE_MSG = "Deleted records failed due to unexpected error";
-
     public static final String DELETED_STATUS_NOT_REPORTED = "Not Reported";
     public static final String DELETED_STATUS_REPORTED = "Reported";
     public static final String DELETED_MAIl_TO = "DELETED_MAIl_TO";
     public static final String EMAIL_SUBJECT_DELETED_RECORDS = "List of Deleted Records";
     public static final String EMAIL_DELETED_RECORDS_DISPLAY_MESSAGE = "Total No. of Records Deleted : ";
     public static final String DAILY_RECONCILIATION = "DailyReconciliation";
-
     //Daily Reconcilation
     public static final String DAILY_RR_FTP_ROUTE_ID = "DailyReconcilationFtpRoute";
     public static final String DAILY_RR_FS_ROUTE_ID = "DailyReconcilationFsRoute";
@@ -423,15 +402,12 @@ public final class ReCAPConstants {
     public static final String DAILY_RR_LAS_NOT_GIVEN_STATUS = "LASNotGivenStatus";
     public static final String DAILY_RR_SCSB_NOT_GIVEN_STATUS = "StatusNotFoundInScsb";
     public static final String DAILY_RR_NOT_IN_SCSB = "NotInScsb";
-
-    //status Reconciliation
-
     public static final String STATUS_RECONCILIATION_REPORT = "scsbactivemq:queue:statusReconciliationReportQ";
     public static final String STATUS_RECONCILIATION_REPORT_ID = "statusReconciliationReportRoute";
     public static final String REPORT_FILE_NAME = "fileName";
 
+    //status Reconciliation
     public static final String COMPLETE = "Complete";
-
     public static final String ACCESSION_RR_FTP_OPTIONS = "&sendEmptyMessageWhenIdle=true&move=.done&delay=2s&localWorkDirectory=";
     public static final String ACCESSION_RECONCILATION_FTP_PUL_ROUTE = "accessionReconcilationFtpPulRoute";
     public static final String ACCESSION_RECONCILATION_FTP_CUL_ROUTE = "accessionReconcilationFtpCulRoute";
@@ -442,7 +418,6 @@ public final class ReCAPConstants {
     public static final String ACCESSION_RECONCILATION_FILE_NAME = "AccessionReconcilation";
     public static final String ACCESSION_RECONCILATION_SOLR_CLIENT_URL = "accessionReconcilationService/startAccessionReconcilation";
     public static final String STARTING = "Starting {} ";
-
     public static final String SUBMIT_COLLECTION_FTP_PUL_ROUTE = "pulSubmitCollectionFTPRoute";
     public static final String SUBMIT_COLLECTION_FTP_CGD_PROTECTED_PUL_ROUTE = "pulSubmitCollectionFTPCgdProtectedRoute";
     public static final String SUBMIT_COLLECTION_FTP_CGD_NOT_PROTECTED_PUL_ROUTE = "pulSubmitCollectionFTPCgdNotProtectedRoute";
@@ -455,12 +430,9 @@ public final class ReCAPConstants {
     public static final String SUBMIT_COLLECTION_COMPLETED_ROUTE = "submitCollectionCompletedRoute";
     public static final String SUBMIT_COLLECTION__CAUGHT_EXCEPTION_METHOD = "caughtException";
     public static final String SUBMIT_COLLECTION_EXCEPTION_BODY_VM = "submit_collection_exception_body.vm";
-
     public static final String DELETED_MAIL_QUEUE = "deletedRecordsMailSendQueue";
     public static final String COUNT_OF_PURGED_ACCESSION_REQUESTS = "countOfPurgedAccessionRequests";
-
     public static final String STATUS_RECONCILIATION_CHANGE_LOG_OPERATION_TYPE = "StatusReconciliation-ItemAvailablityStatusChange";
-
     public static final String REQUEST_DATA_LOAD_DATE_FORMAT = "MM/dd/yyyy HH:mm:ss";
     public static final String REQUEST_INITIAL_LOAD_FS_FILE = "file:";
     public static final String REQUEST_INITIAL_LOAD_PUL_FS_ROUTE = "requestInitialLoadPulFsRoute";
@@ -470,11 +442,9 @@ public final class ReCAPConstants {
     public static final String REQUEST_INITIAL_LOAD_CUL_FTP_ROUTE = "requestInitialLoadCulFtpRoute";
     public static final String REQUEST_INITIAL_LOAD_NYPL_FTP_ROUTE = "requestInitialLoadNyplFtpRoute";
     public static final String REQUEST_INITIAL_FILE_NAME = "InitialRequestLoadBarcodeFail_";
-
     public static final String FOR = "for";
     public static final String STATUS_RECONCILIATION = "StatusReconciliation";
     public static final String STATUS_RECONCILIATION_FAILURE = "StatusReconciliationFailure";
-
     public static final String REQUEST_INITIAL_LOAD_PUL = "pul";
     public static final String REQUEST_INITIAL_LOAD_CUL = "cul";
     public static final String REQUEST_INITIAL_LOAD_NYPL = "nypl";
@@ -482,7 +452,6 @@ public final class ReCAPConstants {
     public static final String REQUEST_INITIAL_LOAD_HEADER = "Barcodes Not Exist In SCSB";
     public static final String EMAIL_HEADER_REQUEST_PENDING = "Request_Pending";
     public static final String REQUEST_PENDING_EMAIL_BODY_VM = "requestPendingEmailBody.vm";
-
     // NYPL API URL
     public static final String NYPL_CHECKOUT_REQUEST_URL = "/checkout-requests";
     public static final String NYPL_CHECKIN_REQUEST_URL = "/checkin-requests";
@@ -492,13 +461,11 @@ public final class ReCAPConstants {
     public static final String NYPL_RECAP_REFILE_REQUEST_URL = "/recap/refile-requests";
     public static final String NYPL_HOLD_REQUEST_URL = "/hold-requests";
     public static final String NYPL_PATRON_BY_BARCODE_URL = "/patrons?barcode=";
-
     public static final String INPUT_RECORDS = "inputRecords";
     public static final String INSTITUTION = "institution";
     public static final String IS_CGD_PROTECTED = "isCGDProtected";
     public static final String OWN_INST_BIBID_LIST = "owningInstBibIdList";
     public static final String OWN_INSTITUTION_ID = "institutionId";
-
     //Date Pattern
     public static final String FILE_DATE_FORMAT = "yyyyMMdd_HHmmss";
     public static final String CHECK_IN_REQUEST_SUCCESSFUL = "Check In Request Successful";
@@ -507,7 +474,6 @@ public final class ReCAPConstants {
     public static final String ITEM_REQUEST_FAILED = "Item Request Failed";
     public static final String PATRON_VALIDATION_FAILED = "Patron Validation Failed: ";
     public static final String ILS_CONNECTION_FAILED = "ILS Connection Failed";
-
     public static final String CAMEL_SPLIT_COMPLETE = "CamelSplitComplete";
     public static final String DIRECT = "direct:";
     public static final String PROCESS_DAILY_RECONCILIATION = "processDailyReconciliaion";
@@ -519,7 +485,6 @@ public final class ReCAPConstants {
     public static final String REQUEST_INITIAL_LOAD_NYPL_DIRECT_ROUTE = "requestInitialLoadNyplDirectRoute";
     public static final String ACCESSION_RECONCILIATION_HEADER = "Barcodes not present in SCSB";
     public static final String DIRECT_ROUTE_FOR_EXCEPTION = "direct:Exception";
-
     public static final String LAS = "LAS";
     public static final String USER = "User";
     public static final String REQUEST_RECALL = "RequestItem-Recall";
@@ -528,11 +493,8 @@ public final class ReCAPConstants {
     public static final String PROCESSED = "PROCESSED";
     public static final String BULK_REQUEST_EMAIL_QUEUE = "BulkRequestEmailQueue";
     public static final String BULK_REQUEST_EMAIL_BODY_VM = "bulkRequestEmailBody.vm";
-
     public static final String NYPL_NO_RESTRICTIONS = "Standard NYPL restrictions apply";
-
     public static final String BARCODE_RECONCILIATION_FILE_DATE_FORMAT = "yyyyMMdd";
-
     public static final String SUBMIT_COLLECTION_JOB_INITIATE_QUEUE = "scsbactivemq:queue:submitCollectionInitiateQ";
     public static final String SUBMIT_COLLECTION_JOB_INITIATE_ROUTE_ID = "scsbactivemq:queue:submitCollectionInitiateRoute";
     public static final String SUBMIT_COLLECTION_JOB_COMPLETION_OUTGOING_QUEUE = "scsbactivemq:queue:submitCollectionCompletionOutgoingQ";
@@ -540,8 +502,6 @@ public final class ReCAPConstants {
     public static final String CUSTOMER_CODE_HEADER = "Customer Code mentioned in LAS";
     public static final String TAB = "\t";
     public static final String NEW_LINE = "\n";
-    public static String LAS_ITEM_STATUS_REST_SERVICE = "http://recapgfa-dev.princeton.edu:9092/lasapi/rest/lasapiSvc/itemStatus";
-
     public static final String DEFAULT_DATE_FORMAT = "dd-MM-yyyy hh:mm";
     public static final String REQUEST_STATUS = "RequestStatus";
     public static final String REQUEST_IDS = "RequestIds";
@@ -560,18 +520,19 @@ public final class ReCAPConstants {
     public static final String REQUEST_REPLACE_BY_TYPE_NOT_SELECTED = "Provide one of the values to \"replaceRequestByType\" :  RequestStatus, RequestIds, RangeOfRequestIds, RangeOfRequestDates";
     public static final String REQUEST_MESSAGE_RECEVIED = "Message received, your request will be processed";
     public static final String DEACCESSION = "Deaccession";
-
+    public static final String BULK_REQUEST_ID_TEXT = "Bulk Request Id : ";
+    public static final String ITEM_STATUS_NOT_AVAILABLE = "Not Available";
+    protected static final List<String> GFA_STATUS_AVAILABLE_LIST = Arrays.asList(GFA_STATUS_INCOMING_ON_WORK_ORDER, GFA_STATUS_REACC_ON_WORK_ORDER, GFA_STATUS_VER_ON_REFILE_WORK_ORDER, GFA_STATUS_IN);
+    protected static final List<String> GFA_STATUS_NOT_AVAILABLE_LIST = Arrays.asList(GFA_STATUS_SCH_ON_REFILE_WORK_ORDER, GFA_STATUS_NOT_ON_FILE, GFA_STATUS_OUT_ON_RETRIVAL_WORK_ORDER, GFA_STATUS_PW_INDIRECT_WORK_ORDER, GFA_STATUS_PW_DIRECT_WORK_ORDER,
+            GFA_STATUS_SCH_ON_RET_WORK_ORDER, GFA_STATUS_VER_ON_PW_INDIRECT_WORK_ORDER, GFA_STATUS_VER_ON_PW_DIRECT_WORK_ORDER, GFA_STATUS_VER_ON_RET_WORK_ORDER, GFA_STATUS_VER_ON_WORK_ORDER, GFA_STATUS_REFILE_ON_WORK_ORDER, GFA_STATUS_OUT_ON_EDD_WORK_ORDER, GFA_STATUS_VER_ON_EDD_WORK_ORDER, GFA_STATUS_SCH_ON_EDD_WORK_ORDER);
+    protected static final List<String> REQUEST_TYPE_LIST = Arrays.asList(ReCAPConstants.RETRIEVAL, ReCAPConstants.REQUEST_TYPE_EDD, ReCAPConstants.BORROW_DIRECT, ReCAPConstants.REQUEST_TYPE_RECALL);
+    public static String LAS_ITEM_STATUS_REST_SERVICE = "http://recapgfa-dev.princeton.edu:9092/lasapi/rest/lasapiSvc/itemStatus";
     /**
      * 0 = Initialise Polling Processess
      * 1 = Started Polling Processess
      * 2 = Finish Polling Processess
-     *
      */
     public static int LAS_ITEM_STATUS_REST_SERVICE_STATUS = 0;
-
-    public static final String BULK_REQUEST_ID_TEXT = "Bulk Request Id : ";
-
-    public static final String ITEM_STATUS_NOT_AVAILABLE = "Not Available";
 
     private ReCAPConstants() {
     }

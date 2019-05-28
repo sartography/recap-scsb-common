@@ -4,15 +4,15 @@ import org.junit.Test;
 import org.recap.BaseTestCase;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNull;
 
-public class PropertyValueProviderUT extends BaseTestCase{
+public class PropertyValueProviderUT extends BaseTestCase {
 
     @Autowired
     PropertyValueProvider propertyValueProvider;
 
     @Test
-    public void testGetProperty(){
+    public void testGetProperty() {
         String key = propertyValueProvider.getProperty("key");
         assertNull(key);
     }

@@ -1,5 +1,6 @@
 package org.recap.common.model.jaxb;
 
+import lombok.Data;
 import org.recap.ReCAPConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,12 +11,12 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by pvsubrah on 6/21/16.
  */
+@Data
 public class JAXBHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(JAXBHandler.class);
@@ -53,7 +54,7 @@ public class JAXBHandler {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(object, stringWriter);
         } catch (JAXBException e) {
-            logger.error(ReCAPConstants.LOG_ERROR,e);
+            logger.error(ReCAPConstants.LOG_ERROR, e);
         }
         return stringWriter.toString();
     }
@@ -77,7 +78,7 @@ public class JAXBHandler {
      * @return the object
      * @throws JAXBException the jaxb exception
      */
-    public synchronized Object unmarshal(String content, Class cl) throws JAXBException  {
+    public synchronized Object unmarshal(String content, Class cl) throws JAXBException {
         Object object;
         Unmarshaller unmarshaller = getUnmarshaller(cl);
         object = unmarshaller.unmarshal(new StringReader(content));
@@ -95,45 +96,4 @@ public class JAXBHandler {
         return getUnmarshallerMap().get(cl.getName());
     }
 
-    /**
-     * Gets unmarshaller map.
-     *
-     * @return the unmarshaller map
-     */
-    public Map<String, Unmarshaller> getUnmarshallerMap() {
-        if (null == unmarshallerMap) {
-            unmarshallerMap = new HashMap<>();
-        }
-        return unmarshallerMap;
-    }
-
-    /**
-     * Sets unmarshaller map.
-     *
-     * @param unmarshallerMap the unmarshaller map
-     */
-    public void setUnmarshallerMap(Map<String, Unmarshaller> unmarshallerMap) {
-        this.unmarshallerMap = unmarshallerMap;
-    }
-
-    /**
-     * Gets marshaller map.
-     *
-     * @return the marshaller map
-     */
-    public Map<String, Marshaller> getMarshallerMap() {
-        if (marshallerMap == null) {
-            marshallerMap = new HashMap<>();
-        }
-        return marshallerMap;
-    }
-
-    /**
-     * Sets marshaller map.
-     *
-     * @param marshallerMap the marshaller map
-     */
-    public void setMarshallerMap(Map<String, Marshaller> marshallerMap) {
-        this.marshallerMap = marshallerMap;
-    }
 }

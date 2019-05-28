@@ -1,5 +1,7 @@
 package org.recap.common.model.jaxb.marc;
 
+import lombok.Data;
+
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -24,6 +26,7 @@ import java.io.Serializable;
  * &lt;/complexType>
  * </pre>
  */
+@Data
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "controlFieldType", propOrder = {
         "value"
@@ -47,59 +50,5 @@ public class ControlFieldType implements Serializable {
      */
     @XmlAttribute(name = "tag", required = true)
     protected String tag;
-
-    /**
-     * Gets the value of the value property.
-     *
-     * @return possible object is {@link String }
-     */
-    public String getValue() {
-        return value;
-    }
-
-    /**
-     * Sets the value of the value property.
-     *
-     * @param value allowed object is              {@link String }
-     */
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    /**
-     * Gets the value of the id property.
-     *
-     * @return possible object is {@link String }
-     */
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     *
-     * @param value allowed object is              {@link String }
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
-
-    /**
-     * Gets the value of the tag property.
-     *
-     * @return possible object is {@link String }
-     */
-    public String getTag() {
-        return tag;
-    }
-
-    /**
-     * Sets the value of the tag property.
-     *
-     * @param value allowed object is              {@link String }
-     */
-    public void setTag(String value) {
-        this.tag = value;
-    }
 
 }
