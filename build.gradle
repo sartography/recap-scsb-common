@@ -31,7 +31,7 @@ test {
 }
 
 jar {
-    archiveBaseName = 'common'
+    archiveBaseName = 'recap-scsb-common'
     archiveVersion = '1.0'
 }
 
