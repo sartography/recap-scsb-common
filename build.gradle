@@ -1,3 +1,5 @@
+import org.gradle.api.JavaVersion
+
 plugins {
     id 'eclipse'
     id 'idea'
@@ -8,6 +10,7 @@ plugins {
     id 'org.sonarqube' version '2.7.1'
     id 'io.spring.dependency-management' version '1.0.7.RELEASE'
     id "io.freefair.lombok" version "3.6.4"
+    id 'maven-publish'
 }
 
 repositories {
@@ -17,9 +20,10 @@ repositories {
     maven { url "http://repo1.maven.org/maven2/" }
 }
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 //added to accept systemproperties while executing gradlew test cmd
 test {
