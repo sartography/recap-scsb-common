@@ -55,10 +55,15 @@ test {
     systemProperties['user.dir'] = workingDir
 }
 
+bootJar {
+    launchScript()
+}
+
 jar {
-    archiveBaseName = 'common'
+    enabled = true
+    archiveBaseName = 'scsb-common'
     archiveVersion = '1.0'
 }
 
-group = 'org.recap.common'
+group = 'org.recap'
 version = '1.0'
