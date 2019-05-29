@@ -55,5 +55,10 @@ test {
     systemProperties['user.dir'] = workingDir
 }
 
+jar {
+    archiveBaseName = 'common'
+    archiveVersion = '1.0'
+}
+
 group = 'org.recap.common'
 version = '1.0'
