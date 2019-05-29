@@ -46,5 +46,5 @@ dependencies {
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
 }
 
-group = 'org.recap.scsb'
+group = 'org.recap'
 version = '1.0'
