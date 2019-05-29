@@ -6,7 +6,6 @@ plugins {
     id 'jacoco'
     id 'org.springframework.boot' version '2.1.4.RELEASE'
     id 'org.sonarqube' version '2.7.1'
-    id "io.freefair.lombok" version "3.6.4"
 }
 
 apply plugin: 'java'
@@ -56,5 +55,5 @@ test {
     systemProperties['user.dir'] = workingDir
 }
 
-group = 'org.recap'
+group = 'org.recap.common'
 version = '1.0'
