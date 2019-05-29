@@ -28,11 +28,6 @@ test {
     systemProperties['user.dir'] = workingDir
 }
 
-jar {
-    archiveBaseName = 'common'
-    archiveVersion = '1.0'
-}
-
 dependencies {
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
     compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
@@ -51,13 +46,5 @@ dependencies {
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
 }
 
-task scsbCommonJavadocs(type: Javadoc) {
-    source = sourceSets.main.java
-    classpath = configurations.compile
-    options.addStringOption('Xdoclint:none', '-quiet')
-    String home = System.getProperty('user.home');
-    destinationDir =  new File(home+'/scsb-common-javadocs/scsb-common');
-}
-
-group = 'com.sartography.scsb'
+group = 'org.recap.scsb'
 version = '1.0'
