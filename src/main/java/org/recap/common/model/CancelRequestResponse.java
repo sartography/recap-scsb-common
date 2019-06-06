@@ -1,4 +1,4 @@
-package org.recap.model;
+package org.recap.common.model;
 
 import lombok.Builder;
 import lombok.Data;

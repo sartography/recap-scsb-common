@@ -7,6 +7,6 @@ import lombok.experimental.SuperBuilder;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
-public class ItemDestination extends Destination {
+public class ItemSource extends Source {
     private String owningInstitutionItemId;
 }

@@ -1,4 +1,4 @@
-package org.recap.model.reports;
+package org.recap.common.model.reports;
 
 import java.util.ArrayList;
 import java.util.List;

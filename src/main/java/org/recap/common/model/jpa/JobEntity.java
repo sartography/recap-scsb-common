@@ -1,4 +1,4 @@
-package org.recap.model.jpa;
+package org.recap.common.model.jpa;
 
 import javax.persistence.*;
 import java.util.Date;
